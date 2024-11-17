@@ -1,13 +1,12 @@
-from geo import utils
+import geo.utils as utils
 
-def main():
-    # 표준 입력을 통해 좌표를 입력받기
-    x1, y1 = map(float, input("첫 번째 좌표 (x1, y1): ").split())
-    x2, y2 = map(float, input("두 번째 좌표 (x2, y2): ").split())
+# calculate the length of hypotenuse(c) when a=3 and b=4
+a, b = 3, 4
+c = utils.hypotenuse(a, b)  # hypotenuse 함수 호출
+print('c =', c)
 
-    # calculate_distance 함수 호출
-    distance = utils.calculate_distance((x1, y1), (x2, y2))
-    print(f"계산된 거리: {distance}")
+# calculate the area of circle with radius r = 10
+r = 10
+area = utils.circle_area(r)  # circle_area 함수 호출
+print('area =', area)
 
-if __name__ == "__main__":
-    main()
