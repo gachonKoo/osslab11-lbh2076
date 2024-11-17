@@ -1,16 +1,16 @@
-import math
+import math  # math 모듈 사용
 
-def calculate_distance(coord1, coord2):
-    """
-    두 좌표 간의 유클리드 거리를 계산하는 함수.
-    
-    Parameters:
-    coord1, coord2: 각각 (x, y) 형식의 튜플
-    
-    Returns:
-    거리 (float)
-    """
-    x1, y1 = coord1
-    x2, y2 = coord2
-    distance = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
-    return distance
+# 피타고라스 정리를 이용한 빗변 길이 계산
+def hypotenuse(a, b):
+    return math.sqrt(a**2 + b**2)
+
+# 원의 넓이 계산
+def circle_area(radius):
+    return math.pi * radius**2  # math.pi를 사용하여 더 정확한 계산
+
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
