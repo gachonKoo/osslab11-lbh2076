@@ -1,16 +1,13 @@
-from geo.utils import add, subtract
+from geo import utils
 
-def test_add():
-    assert add(2, 3) == 5
-    assert add(-1, 1) == 0
-    print("add() 테스트 성공")
+def main():
+    # 표준 입력을 통해 좌표를 입력받기
+    x1, y1 = map(float, input("첫 번째 좌표 (x1, y1): ").split())
+    x2, y2 = map(float, input("두 번째 좌표 (x2, y2): ").split())
 
-def test_subtract():
-    assert subtract(5, 3) == 2
-    assert subtract(0, 1) == -1
-    print("subtract() 테스트 성공")
+    # calculate_distance 함수 호출
+    distance = utils.calculate_distance((x1, y1), (x2, y2))
+    print(f"계산된 거리: {distance}")
 
 if __name__ == "__main__":
-    test_add()
-    test_subtract()
-    print("모든 테스트 성공")
+    main()
